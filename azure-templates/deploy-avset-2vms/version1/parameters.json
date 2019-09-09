@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "South India"
+        },
+        "numberOfInstances": {
+            "value": 2
+        },
+        "networkInterfaceName": {
+            "value": "MyNIC"
+        },
+        "networkSecurityGroupName": {
+            "value": "MyNSG"
+        },
+        "subnetName": {
+            "value": "MySUb"
+        },
+        "virtualNetworkName": {
+            "value": "MyVNet"
+        },
+        "addressPrefixes": {
+            "value": "18.0.0.0/16"
+        },
+        "subnetAddressPrefixes": {
+            "value": "18.0.1.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "MyPip"
+        },
+        "publicIpAddressType": {
+            "value": "public"
+        },
+        "publicIpAddressSku": {
+            "value": "basic"
+        },
+        "virtualMachineName": {
+            "value": "MyVM"
+        },
+        "virtualMachineRG": {
+            "value": "MyRG"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ms"
+        },
+        "adminUsername": {
+            "value": "abdul"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "availabilitySetName": {
+            "value": "MyAVSet"
+        },
+        "availabilitySetPlatformFaultDomainCount": {
+            "value": 2
+        },
+        "availabilitySetPlatformUpdateDomainCount": {
+            "value": 5
+        }
+    }
+}

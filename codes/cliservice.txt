@@ -1,0 +1,7 @@
+az login
+
+
+az ad sp create-for-rbac -n "storageblobreader" --role 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1 --scopes /subscriptions/4bb5c1c7-e7a2-43b2-8a1a-df7b4bc4b9cb
+
+
+az ad sp create-for-rbac -n "blobreader" --role 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1 --scopes /subscriptions/4bb5c1c7-e7a2-43b2-8a1a-df7b4bc4b9cb --sdk-auth > blobreaderauth

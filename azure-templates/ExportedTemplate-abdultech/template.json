@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_vm2_name": {
+            "defaultValue": "vm2",
+            "type": "String"
+        },
+        "availabilitySets_AVSET_externalid": {
+            "defaultValue": "/subscriptions/4bb5c1c7-e7a2-43b2-8a1a-df7b4bc4b9cb/resourceGroups/abdultech/providers/Microsoft.Compute/availabilitySets/AVSET",
+            "type": "String"
+        },
+        "disks_vm2_OsDisk_1_8cc2b90608954973b18f3002fc50583f_externalid": {
+            "defaultValue": "/subscriptions/4bb5c1c7-e7a2-43b2-8a1a-df7b4bc4b9cb/resourceGroups/ABDULTECH/providers/Microsoft.Compute/disks/vm2_OsDisk_1_8cc2b90608954973b18f3002fc50583f",
+            "type": "String"
+        },
+        "networkInterfaces_vm2557_externalid": {
+            "defaultValue": "/subscriptions/4bb5c1c7-e7a2-43b2-8a1a-df7b4bc4b9cb/resourceGroups/abdultech/providers/Microsoft.Network/networkInterfaces/vm2557",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2019-03-01",
+            "name": "[parameters('virtualMachines_vm2_name')]",
+            "location": "southindia",
+            "tags": {
+                "CostCenter": "Training"
+            },
+            "properties": {
+                "availabilitySet": {
+                    "id": "[parameters('availabilitySets_AVSET_externalid')]"
+                },
+                "hardwareProfile": {
+                    "vmSize": "Standard_B1ms"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "Canonical",
+                        "offer": "UbuntuServer",
+                        "sku": "18.04-LTS",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Linux",
+                        "name": "[concat(parameters('virtualMachines_vm2_name'), '_OsDisk_1_8cc2b90608954973b18f3002fc50583f')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "id": "[parameters('disks_vm2_OsDisk_1_8cc2b90608954973b18f3002fc50583f_externalid')]"
+                        }
+                    },
+                    "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_vm2_name')]",
+                    "adminUsername": "abdul",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": false,
+                        "provisionVMAgent": true
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('networkInterfaces_vm2557_externalid')]"
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true,
+                        "storageUri": "https://abdultechdiag.blob.core.windows.net/"
+                    }
+                }
+            }
+        }
+    ]
+}

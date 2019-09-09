@@ -1,0 +1,62 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "loadBalancers_MyInternalLB_name": {
+            "defaultValue": "MyInternalLB",
+            "type": "String"
+        },
+        "virtualNetworks_MyVNet_externalid": {
+            "defaultValue": "/subscriptions/4bb5c1c7-e7a2-43b2-8a1a-df7b4bc4b9cb/resourceGroups/MyTestRG/providers/Microsoft.Network/virtualNetworks/MyVNet",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/loadBalancers",
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('loadBalancers_MyInternalLB_name')]",
+            "location": "southindia",
+            "tags": {
+                "CostCenter": "Training"
+            },
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "10a7928b-c8df-4a54-af51-056f92341e2d",
+                "frontendIPConfigurations": [
+                    {
+                        "name": "LoadBalancerFrontEnd",
+                        "etag": "W/\"1399c744-8e5d-4bd2-bd18-aaa4b36bb79b\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAddress": "18.0.2.4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[concat(parameters('virtualNetworks_MyVNet_externalid'), '/subnets/LBSub')]"
+                            },
+                            "privateIPAddressVersion": "IPv4"
+                        }
+                    }
+                ],
+                "backendAddressPools": [
+                    {
+                        "name": "LBPool2",
+                        "etag": "W/\"1399c744-8e5d-4bd2-bd18-aaa4b36bb79b\"",
+                        "properties": {
+                            "provisioningState": "Succeeded"
+                        }
+                    }
+                ],
+                "loadBalancingRules": [],
+                "probes": [],
+                "inboundNatRules": [],
+                "inboundNatPools": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+bc9bb901-1397-4f0f-92b7-4f42dfc40352
+
+J/rchl[miu]L_8BGi8P4leN5:It@3XoV
+
+
+az login --service-principal --username bc9bb901-1397-4f0f-92b7-4f42dfc40352 --password J/rchl[miu]L_8BGi8P4leN5:It@3XoV --tenant b4427580-24af-4037-b9c8-261e6b1ccb99
+
+
+
+az storage blob download --account-name appstorageaccname  --container-name applicationdata --name parameters.json --file ~/myparameters.json  --auth-mode login
+
+
+
+az storage blob list --account-name abdultechstorage --container-name appdata --output table  --auth-mode login
+
+
+
+az login --service-principal --username 9409e9eb-6c26-4bc1-b3c2-a4e6b9e0bd78 --password _s9b65u0KU=rP:dH/sTza22uEp/PjB9n --tenant b4427580-24af-4037-b9c8-261e6b1ccb99
+
+az storage blob download --container-name applicationdata --name parameters.json --file ~/myappparameters.json
+
+
+
+
+
+
+
+ --auth-mode login
+
+
+
+appstorageaccnameauth
+
+user 1bbb0e14-4849-4b30-9de2-e528759821be
+pass hXf2Vrt+S2H-3Q5-*QF6jA]j+3=dMPT8
+
+
+az login --service-principal --username 1bbb0e14-4849-4b30-9de2-e528759821be --password hXf2Vrt+S2H-3Q5-*QF6jA]j+3=dMPT8 --tenant b4427580-24af-4037-b9c8-261e6b1ccb99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+az login --service-principal --username de4c4a62-7634-4ed3-a024-1e36433d20be --password Jp17u[BXUgomyPNov7ql7J]_xQ*usffH --tenant b4427580-24af-4037-b9c8-261e6b1ccb99

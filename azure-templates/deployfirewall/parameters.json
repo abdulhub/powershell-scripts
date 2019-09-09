@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualNetworks_VNetHub_name": {
+            "value": null
+        },
+        "azureFirewalls_CentralFireWall_name": {
+            "value": null
+        },
+        "publicIPAddresses_pip_firewall_name": {
+            "value": null
+        },
+        "virtualNetworks_VNet_externalid": {
+            "value": null
+        },
+        "virtualNetworks_VNet1_externalid": {
+            "value": null
+        }
+    }
+}

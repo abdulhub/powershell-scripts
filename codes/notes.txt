@@ -1,0 +1,41 @@
+172.16.201.0/24
+
+
+How to ssh with a separate key
+
+ssh-keygen -t rsa -f ~/.ssh/my-new-key
+ssh -i ~/.ssh/my-new-key 192.168.x.x
+
+ssh -i ~/.ssh/azure70535-ubuntu3 abdul@10.1.0.6
+   or
+ssh -i .ssh/azure70535-ubuntu3 abdul@10.1.0.6
+
+azure70535-ubuntu3
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+nodejs -v
+
+abdul@10.1.0.5
+
+sudo mkdir -p my-applications
+sudo chmod -R 777 my-applications
+scp -r  /drives/C/Users/abdul/DOCUME~1/angular-frontend   abdul@10.1.0.5:my-applications
+ 
+
+scp   -i  ~/.ssh/azure70535-ubuntu3 -r  /drives/C/Users/abdul/DOCUME~1/angular-frontend abdul@10.1.0.6:my-applications
+
+
+
+cd my-applications/angular-frontend
+
+104.211.228.174 (azure50735-public-lb-ip)
+104.211.159.118
+
+ssh -i ~/home/mobaxterm/.ssh/vnet1-frontend-ubuntu1.pub  abdul@104.211.159.118

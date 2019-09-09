@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_MyVM0_name": {
+            "value": null
+        },
+        "virtualMachines_MyVM1_name": {
+            "value": null
+        },
+        "virtualNetworks_MyVNet_name": {
+            "value": null
+        },
+        "availabilitySets_MyAVSet_name": {
+            "value": null
+        },
+        "networkInterfaces_MyNIC0_name": {
+            "value": null
+        },
+        "networkInterfaces_MyNIC1_name": {
+            "value": null
+        },
+        "publicIPAddresses_MyPip0_name": {
+            "value": null
+        },
+        "publicIPAddresses_MyPip1_name": {
+            "value": null
+        },
+        "loadBalancers_MyInternalLB_name": {
+            "value": null
+        },
+        "virtualNetworks_CentralVNet_name": {
+            "value": null
+        },
+        "routeTables_CentralRouteTable_name": {
+            "value": null
+        },
+        "storageAccounts_mop6ooak7ynwm_name": {
+            "value": null
+        },
+        "azureFirewalls_MyAzureFireWall_name": {
+            "value": null
+        },
+        "publicIPAddresses_MyAzureFireWall_PIP_name": {
+            "value": null
+        }
+    }
+}
